@@ -6,6 +6,7 @@ import {BrowserRouter,Route,Routes} from 'react-router-dom'
 import EmployeeComponent from './components/EmployeeComponent'
 import SignIn from './components/SignIn'
 import StudentDisplay from './components/StudentDisplay'
+import F404 from './components/F404'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Header/>
         <Routes>
           <Route path='/' element={<SignIn/>}/>
+          <Route path='/404' element={<F404/>}/>
           <Route path='/admin' element={<ListStudent/>}/>
           <Route path='/roll/:rollno' element={<StudentDisplay/>}/>
           <Route path='/add-student' element={<EmployeeComponent/>}/>

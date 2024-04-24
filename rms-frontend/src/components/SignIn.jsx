@@ -5,6 +5,7 @@ const SignIn = () => {
     const navigator=useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [v, setv] = useState('');
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
@@ -21,9 +22,14 @@ const SignIn = () => {
     console.log('Password:', password);
     if(username=="admin" && password=="123")
         navigator('/admin')
-    else
+    else{
+      if(username==password){
+        setv('')
         navigator( `/roll/${username}`)
-    // Example: send username and password to server for authentication
+      }
+      else
+        setv("Invalid Credentials")
+    }
   };
 
   return (
@@ -42,6 +48,7 @@ const SignIn = () => {
                   <label htmlFor="password" className="form-label">Password</label>
                   <input type="password" className="form-control" id="password" value={password} onChange={handlePasswordChange} />
                 </div>
+                <p style={{marginLeft:"400px",color:"red"}}>{v}</p>
                 <button type="submit" className="btn btn-primary">Sign In</button>
               </form>
             </div>

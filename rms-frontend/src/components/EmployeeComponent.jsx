@@ -77,7 +77,7 @@ const EmployeeComponent = () => {
                 
                 createStudent(student).then((response)=>{
                     console.log(response.data)
-                    navigator('/student')
+                    navigator('/admin')
                 }).catch(error=>{
                     console.log(error)
                 })

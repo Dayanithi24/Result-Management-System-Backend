@@ -5,7 +5,7 @@ const Header = () => {
     <div>
         <header>
             <nav className='navbar navbar-dark bg-dark'>
-            <a className='navbar-brand'>Result Management System</a>
+            <marquee className='navbar-brand'>Result Management System</marquee>
             </nav>
         </header>
     </div>

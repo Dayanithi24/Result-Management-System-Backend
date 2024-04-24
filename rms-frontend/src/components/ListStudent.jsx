@@ -28,12 +28,16 @@ const ListStudent = () => {
             console.log(error)
         })
     }
+    function exit(){
+        navigator("/")
+    }
 
   return (
     <div className='container'>
         <h2 className='text-center'>Students</h2>
         <button className='btn btn-primary mb-2' onClick={addNewStudent}>Add Student </button>
-      <table className='table table-striped table-bordered'>
+        <button className='btn btn-primary' style={{position:"absolute",right:"120px"}} onClick={exit}>Log Out </button>
+      <table className='table table-striped table-bordered text-center'>
         <thead>
             <tr>
                 <th>ID</th>
@@ -42,10 +46,10 @@ const ListStudent = () => {
                 <th>email</th>
                 <th>
                 
-                    <tr><th colspan="2">Marks</th>
+                    <tr className='col-md-12'><th colspan="2">Marks</th>
                     </tr>
                     <tr>
-                    <th>Subject</th>
+                    <th className='col-md-10'>Subject</th>
                     <th>Grade</th>
                     </tr>
                 </th>
@@ -61,7 +65,7 @@ const ListStudent = () => {
                     <td>{student.rollno}</td>
                     <td>{student.email}</td>
                     <td> {student.marks.map(mark=> <tr> 
-                    <td>{mark.cname }</td> 
+                    <td className='col-md-12'>{mark.cname }</td> 
                     <td>{mark.grade }</td> </tr>)}
                     </td>
                     <td><button className='btn btn-info' onClick={()=>updateStudent(student.id)}>Update</button>
