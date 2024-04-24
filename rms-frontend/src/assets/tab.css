@@ -1,0 +1,21 @@
+td{
+    padding: 10px;
+    background-color: greenyellow;
+    margin-left:2px ;
+    margin: none;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+
+}
+tr{
+    padding: 10px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+}
+th{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+}
